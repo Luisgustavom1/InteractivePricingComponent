@@ -1,0 +1,75 @@
+:root{
+    --full-slide-bar: rgb(165, 243, 235);
+    --slider-background: rgb(16, 213, 194);
+    --discount-background: rgb(254, 236, 231);
+    --discount-text: rgb(255, 140, 102);
+    --cta-text: rgb(189, 204, 255);
+    --pricing-background-component: rgb(255, 255, 255);
+    --main-background: rgb(250, 251, 255);
+    --empty-slide-bar: rgb(234, 238, 251);
+    --toggle-background: rgb(205, 215, 238);
+    --text: rgb(133, 143, 173);
+    --text-cta-background: rgb(41, 51, 86);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--text)
+}
+
+button, input, textarea {
+    border: 0;
+}
+
+il, ul, ol, a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, var(--main-background) 50%, var(--empty-slide-bar) 50%);
+}
+
+/* Content */
+.container {
+    width: 60%;
+
+    margin: 0 auto;
+
+    min-width: 300px;
+
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.titles {
+    margin-bottom: 70px;
+}
+
+.titles h1 {
+    color: var(--text-cta-background);
+} 
+
+/* Card */
+.card {
+    background-color: var(--pricing-background-component);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+

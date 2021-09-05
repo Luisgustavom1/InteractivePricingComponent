@@ -43,15 +43,12 @@ body {
 
 /* Content */
 .container {
-    width: 45%;
-
-    margin: 0 auto;
-
+    width: 40%;
     min-width: 300px;
 
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
 
-    text-align: center;
+    text-align: center; 
 }
 
 .titles {
@@ -70,6 +67,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    border-radius: 15px;   
 }
 
 .card main {
@@ -83,7 +82,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    font-weight: 800;
+    font-weight: 700;
 
     margin-bottom: 30px;
     
@@ -106,19 +105,42 @@ body {
 
 /* Slider bar */
 
-.bar.back {
+.bar {
     width: 90%;
-    height: 8px;
-
-    border-radius: 15px;
-
-    background-color: var(--empty-slide-bar);
+    height: 15px;
 
     margin: 0 auto 30px auto;
 }
 
-/* Discount Section */
+.bar input {
+    width: 100%;
+    height: 15px;
 
+    background-color: var(--empty-slide-bar);
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border-radius: 15px;
+
+    transition: .5s;
+}
+
+.bar input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    background: no-repeat center url('./images/icon-slider.svg');
+    background-color: var(--slider-background);
+
+    cursor: pointer;
+} 
+
+/* Discount Section */
 section {
     display: flex;
     align-items: center;
@@ -143,14 +165,6 @@ section .discount {
 }
 
 /* Switch */
-.switch {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    padding: 0 5px;
-}
-
 .switch input[type='checkbox'] {
     width: 65px;
     height: 30px;
@@ -186,8 +200,47 @@ section .discount {
     background-color: var(--pricing-background-component);
 
     position: relative;
+    cursor: pointer;
+
+    transition: 5s;
 }
 
-.switch input:checked[type='checkbox']::before {
-    left: 62%;
+.switch input:checked[type='checkbox']:before {
+    left: 60%;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 40px 30px 30px 55px;
+}
+
+footer aside button {
+    color: var(--main-background);
+    background-color: var(--text-cta-background);
+
+    font-weight: 600;
+
+    width: 180px;
+    height: 45px;
+
+    border-radius: 30px;
+}
+
+footer aside button:hover {
+    filter: brightness(1.2);
+}
+
+footer article li{
+    text-align: start;
+
+    margin-bottom: 10px;
+
+    list-style-image: url('./images/icon-check.svg');
 }

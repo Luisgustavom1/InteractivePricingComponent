@@ -38,13 +38,15 @@ il, ul, ol, a {
 body {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, var(--main-background) 50%, var(--empty-slide-bar) 50%);
-}
+    background: no-repeat url('./images/bg-pattern.svg');
+    background-size: contain;
+    background-color: var(--main-background);
+}   
 
 /* Content */
 .container {
-    width: 40%;
-    min-width: 300px;
+    width: 607.675px;
+    min-width: 280px;
 
     margin: 30px auto 0 auto;
 
@@ -147,7 +149,7 @@ section {
     justify-content: end;
     gap: 8px;
 
-    padding: 0 20px 40px 0;
+    padding: 30px 20px 40px 0;
 
     border-bottom: 2px solid var(--empty-slide-bar);
 }
@@ -243,4 +245,33 @@ footer article li{
     margin-bottom: 10px;
 
     list-style-image: url('./images/icon-check.svg');
+}
+
+/* Responsive */
+
+@media(max-width: 640px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media(max-width: 550px) {
+    .card header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .discount .wordDiscount {
+        display: none;
+    }
+    
+    .card footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+    }
 }

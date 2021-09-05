@@ -11,8 +11,7 @@
     <title>Interactive Pricing Component</title>
 </head>
 <body>
-
-    <main class="container">
+    <div class="container">
         <div class="titles">
             <h1>Simple, traffic-based pricing</h1>
             <p>Sign-up for our 30-day trial. No credit card required</p>
@@ -22,7 +21,7 @@
                 <header>
                     <p>100K PAGEVIEWS</p>
                     <span>
-                        <h3>$16</h3>
+                        <h3>$16.00</h3>
                         <p>/month</p>
                     </span>
                 </header>
@@ -35,17 +34,16 @@
                 </div>
                 <section>
                     <p>Monthly Biling</p>
-                    <div class="switchContainer">
-                        <div class="switch">
-                            <span class="ballSwitch">
+                    <div class="switch">
+                        <input type='checkbox'/>
+                        <span class="ballSwitch">
 
-                            </span>
-                        </div>
+                        </span>
                     </div>
                     <p>
                         Yearly Biling
                     </p>
-                    <div>
+                    <div class="discount">
                         25% discount
                     </div>
                 </section>
@@ -65,7 +63,7 @@
                 </aside>
             </footer>
         </div>
-    </main>
+    </div>
 
     <script src="script.js" defer type="module"></script>
 </body>

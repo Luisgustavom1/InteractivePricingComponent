@@ -36,14 +36,14 @@ il, ul, ol, a {
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(to top, var(--main-background) 50%, var(--empty-slide-bar) 50%);
 }
 
 /* Content */
 .container {
-    width: 60%;
+    width: 45%;
 
     margin: 0 auto;
 
@@ -72,4 +72,122 @@ body {
     justify-content: center;
 }
 
+.card main {
+    width: 100%;
+}
 
+.card header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+    
+    padding: 30px 40px;
+}
+
+.card header span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.card header span h3 {
+    font-size: 30px;
+
+    color: var(--text-cta-background)
+}
+
+/* Slider bar */
+
+.bar.back {
+    width: 90%;
+    height: 8px;
+
+    border-radius: 15px;
+
+    background-color: var(--empty-slide-bar);
+
+    margin: 0 auto 30px auto;
+}
+
+/* Discount Section */
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+
+    padding: 0 20px 40px 0;
+
+    border-bottom: 2px solid var(--empty-slide-bar);
+}
+
+section .discount {
+    background-color: var(--discount-background);
+    color: var(--discount-text);
+
+    font-weight: 600;
+    font-size: 10px;
+
+    padding: 3px 10px;
+
+    border-radius: 15px;
+}
+
+/* Switch */
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 5px;
+}
+
+.switch input[type='checkbox'] {
+    width: 65px;
+    height: 30px;
+
+    appearance: none;
+
+    display: block;
+
+    background-color: var(--empty-slide-bar);
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 5px;
+
+    transition: .5s;
+}
+
+.switch input:checked[type='checkbox'] {
+    background-color: var(--full-slide-bar);
+}
+
+.switch input[type='checkbox']:before {
+    content: '';
+   
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+    background-color: var(--pricing-background-component);
+
+    position: relative;
+}
+
+.switch input:checked[type='checkbox']::before {
+    left: 62%;
+}
